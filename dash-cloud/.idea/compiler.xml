@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dash-common" />
+        <module name="dash-gateway" />
+        <module name="dash-monitor-admin" />
+        <module name="dash-register" />
+        <module name="dash-server-system" />
+        <module name="dash-server-test" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

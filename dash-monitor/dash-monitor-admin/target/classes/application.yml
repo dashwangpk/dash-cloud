@@ -1,0 +1,10 @@
+server:
+  port: 8401
+
+spring:
+  application:
+    name: DASH-Monitor-Admin
+  boot:
+    admin:
+      ui:
+        title: ${spring.application.name}

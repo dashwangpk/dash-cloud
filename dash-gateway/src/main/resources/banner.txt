@@ -1,0 +1,8 @@
+|------------------------------|
+|       dash-gateway           |
+|                              |
+|   ${spring.application.name}               |
+|   Spring-Boot: ${spring-boot.version} |
+|                              |
+|                              |
+|------------------------------|
