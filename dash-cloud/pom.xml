@@ -24,6 +24,7 @@
         <module>../dash-entities</module>
         <module>../dash-monitor</module>
         <module>../dash-api</module>
+        <module>../dash-auth</module>
     </modules>
 
     <name>DASH-Cloud</name>

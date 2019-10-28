@@ -3,25 +3,38 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
+        <artifactId>dash-cloud</artifactId>
         <groupId>com.sprint</groupId>
-        <artifactId>dash-server</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath>../dash-cloud/pom.xml</relativePath>
     </parent>
-
     <groupId>com.sprint</groupId>
-    <artifactId>dash-server-system</artifactId>
+    <artifactId>dash-auth</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>DASH-Server-System</name>
-    <description>DASH-Server-System微服务系统模块</description>
+    <name>DASH-Auth</name>
+    <description>DASH-Auth jwt认证</description>
 
     <dependencies>
+        <dependency>
+            <groupId>com.sprint</groupId>
+            <artifactId>dash-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>

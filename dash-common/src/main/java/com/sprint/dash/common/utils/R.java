@@ -53,4 +53,10 @@ public class R extends HashMap<String, Object> {
         super.put(key, value);
         return this;
     }
+
+    public boolean isOk(){
+        Object msg = super.get("msg");
+        int code = (int) super.get("code");
+        return  "msg".equals(msg) && code == 0;
+    }
 }

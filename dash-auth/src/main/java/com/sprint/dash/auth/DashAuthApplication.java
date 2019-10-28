@@ -1,19 +1,19 @@
-package com.sprint.dash.gateway;
+package com.sprint.dash.auth;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 
-@EnableZuulProxy
 @EnableDiscoveryClient
 @SpringBootApplication
+@MapperScan("com.sprint.dash.server.auth.mapper")
 @ComponentScan(basePackages = {"com.sprint.dash"})
-public class DashGatewayApplication {
+public class DashAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DashGatewayApplication.class, args);
+        SpringApplication.run(DashAuthApplication.class, args);
     }
 
 }

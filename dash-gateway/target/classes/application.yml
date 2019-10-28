@@ -4,11 +4,24 @@ server:
 spring:
   application:
     name: DASH-Gateway
-
   boot:
     admin:
       client:
         url: http://localhost:8401
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    database: 0
+    host: 192.168.1.213
+    port: 6379
+    jedis:
+      pool:
+        min-idle: 8
+        max-idle: 500
+        max-active: 2000
+        max-wait: 10000
+    timeout: 5000
 
 info:
   app:
@@ -38,9 +51,13 @@ eureka:
       defaultZone: http://localhost:8001/register/eureka/
 zuul:
   routes:
-    auth:
-      path: /system/**
+    system:
+      path: /system-service/**
       serviceId: DASH-Server-System
+      sensitiveHeaders: "*"
+    auth:
+      path: /auth-service/**
+      serviceId: DASH-Auth
       sensitiveHeaders: "*"
   retryable: true
   ignored-services: "*"
